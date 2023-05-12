@@ -41,7 +41,7 @@ public class JogodaVelha {
 				System.out.println("Essa casa não está vazia");
 			}
 			exibirgrade();
-			if(ganhar(jogador.getNome())==true) {
+			if(ganhar()==true) {
 				System.out.println("O ganhador é: "+ jogador.getNome());
 				contador=9;
 			}
@@ -51,21 +51,22 @@ public class JogodaVelha {
 			contador++;
 		}
 	}
-	public	boolean ganhar(String ganhador) {
+	public	boolean ganhar() {
 		boolean ganhar=false;
 		if(array[0][0]!=null &&(array[0][0]==array[0][1] && array[0][1]==array[0][2]) || array[0][0]!=null&&(array[0][0]==array[1][1] && array[1][1]==array[2][2])) {
-			ganhador=array[0][0];
 			ganhar=true;
 			return ganhar;
 		}
 		if(array[1][0]!=null &&(array[1][0]==array[1][1] && array[1][1]==array[1][2])) {
-			ganhador=array[1][0];
 			ganhar=true;
 			return ganhar;
 			
 		}
 		if(array[2][0]!=null&&(array[2][0]==array[2][1] && array[2][1]==array[2][2]) || array[2][0]!=null && (array[0][2]==array[1][1]&& array[1][1]==array[2][0])) {
-			ganhador=array[2][0];
+			ganhar=true;
+			return ganhar;
+		}
+		if(array[0][0]!=null&&(array[0][0]==array[1][0]&&array[1][0]==array[2][0])||array[0][1]!=null&&(array[0][1]==array[1][1]&&array[1][1]==array[2][1])||array[2][0]!=null&&(array[2][0]==array[2][1]&&array[2][1]==array[2][2])) {
 			ganhar=true;
 			return ganhar;
 		}
