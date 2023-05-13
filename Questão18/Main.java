@@ -34,10 +34,14 @@ termina na flecha (verde), como demonstrado nas figuras (A, B e C)
 abaixo: */
 	public static void main(String[] args) {
 		Robo robo = new Robo();
-		Area area = new Area(10,10,robo);
-		area.adicionar();
+		Moeda moeda = new Moeda();
+		moeda.randomizar(10);
+		Area area = new Area(10,10,robo,moeda);
 		area.Imprimir();
-
+		System.out.println("f");
+		area.moverdireita();
+		area.moverbaixo();
+		area.Imprimir();
 	}
 
 }

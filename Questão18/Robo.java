@@ -3,7 +3,7 @@ package Questão18;
 public class Robo extends Parte{
 
 	public Robo() {
-	
+		nome="Robo";
 	}
 	public void andaesquerda() {
 		positionx-=1;
@@ -16,6 +16,9 @@ public class Robo extends Parte{
 	}
 	public void andabaixo() {
 		positiony+=1;
+	}
+	public String nome() {
+		return nome;
 	}
 	
 }
