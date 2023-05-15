@@ -39,9 +39,19 @@ abaixo: */
 		Area area = new Area(10,10,robo,moeda);
 		area.Imprimir();
 		System.out.println("f");
-		area.moverdireita();
-		area.moverbaixo();
+		area.seguiratemoeda();
 		area.Imprimir();
+		System.out.println(area.contarposicoesP());
+		System.out.println(area.contarposicoesN());
+		System.out.println(area.contadorleste);
+		System.out.println(area.contadoroeste);
+		System.out.println(area.contadorsul);
+		System.out.println(area.contadornorte);
+		area.caminhadaA();
+		System.out.println("Space");
+		area.caminhadaB();
+		System.out.println("Space");
+		area.caminhadaC();
 	}
 
 }
